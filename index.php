@@ -35,8 +35,7 @@ $restoredStorage = new FileStorage('board.txt');
 
 $restoredBoard = $restoredStorage->restore();
 $restoredBoard->makeMove(BoardConfiguration::FIGURE_PAWN,3, ['c'=>3]);
-var_dump($restoredBoard->getFigure(BoardConfiguration::FIGURE_PAWN,3)->currentFigurePlace());
-var_dump($restoredBoard->getFigure(BoardConfiguration::FIGURE_PAWN,9));
 
-//var_dump($board->getFigure(BoardConfiguration::FIGURE_PAWN,2));
-//var_dump($board->getFigure(BoardConfiguration::FIGURE_PAWN,1));
+var_dump($restoredBoard->getFigure(BoardConfiguration::FIGURE_PAWN,3)->currentFigurePlace());
+var_dump($restoredBoard->getFigure(BoardConfiguration::FIGURE_PAWN,3)->currentFigurePlace());
+var_dump($restoredBoard->getFigure(BoardConfiguration::FIGURE_ROCK,4));
