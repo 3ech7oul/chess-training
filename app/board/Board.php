@@ -50,7 +50,7 @@ class Board
     {
         if (isset($this->existFigures[$figure]) && isset($this->existFigures[$figure][$figureId])) {
             $figure = $this->existFigures[$figure][$figureId];
-            return $figure->currentFigurePlace();
+            return $figure;
         }
 
         return false;
