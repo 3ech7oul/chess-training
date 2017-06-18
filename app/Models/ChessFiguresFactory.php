@@ -17,6 +17,8 @@ abstract class ChessFiguresFactory
     abstract public function createFigure (array $figurePlace): Figure;
 
     /**
+     *
+     *
      * @param EventsInterface $eventObserver
      * @param $strEventType
      */

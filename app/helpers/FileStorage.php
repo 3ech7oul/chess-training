@@ -3,7 +3,7 @@ namespace app\helpers;
 
 use app\Board\Board;
 
-class FileStorageInterface implements  StorageInterface
+class FileStorage implements  StorageInterface
 {
     private $fileName;
 

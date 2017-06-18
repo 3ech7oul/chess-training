@@ -8,7 +8,7 @@ use \app\Board\BoardConfiguration;
 use \app\Board\Board;
 use \app\Models\PawnFactory;
 use \app\Models\RookFactory;
-use \app\helpers\FileStorageInterface;
+use \app\helpers\FileStorage;
 use \app\events\PrintMessageEvent;
 
 
@@ -29,9 +29,9 @@ $board->deleteFigure(BoardConfiguration::FIGURE_PAWN,2);
 
 $board->addFigure(BoardConfiguration::FIGURE_ROCK,4, ['a'=>1]);
 
-$board->saveBoardToFile('board.txt');
+$board->saveBoard();
 
-$restoredStorage = new FileStorageInterface('board.txt');
+$restoredStorage = new FileStorage('board.txt');
 
 $restoredBoard = $restoredStorage->restore();
 $restoredBoard->makeMove(BoardConfiguration::FIGURE_PAWN,3, ['c'=>3]);

@@ -3,7 +3,7 @@
 
 namespace app\Board;
 
-use app\helpers\FileStorageInterface;
+use app\helpers\FileStorage;
 
 class Board
 {
@@ -27,9 +27,11 @@ class Board
     }
 
     /**
+     * Добавляет фигуру на доску.
+     *
      * @param $figure
-     * @param int $figureId
-     * @param array $position
+     * @param int $figureId Ид фигуры
+     * @param array $position Расположение фигуры на доске, массив, где ключ это горизотналь, значение вертикаль.
      */
     public function addFigure($figure, int $figureId, array $position)
     {
@@ -38,6 +40,8 @@ class Board
     }
 
     /**
+     * Возвращает фигуру по её ИД
+     *
      * @param $figure
      * @param int $figureId
      * @return bool
@@ -53,9 +57,11 @@ class Board
     }
 
     /**
-     * @param $figure
-     * @param int $figureId
-     * @param array $newPosition
+     * Делает ход фигуры.
+     *
+     * @param $figure Объект фигуры
+     * @param int $figureId Ид фигуры
+     * @param array $position Расположение фигуры на доске, массив, где ключ это горизотналь, значение вертикаль.
      * @return bool
      */
     public function makeMove($figure, int $figureId, array $newPosition)
@@ -70,6 +76,8 @@ class Board
     }
 
     /**
+     * Удаляет фигуру
+     *
      * @param $figure
      * @param int $figureId
      * @return bool
@@ -86,12 +94,16 @@ class Board
     }
 
     /**
+     * Сохраняет доску. FileStorage имплементирует StorageInterface.
+     * Для добавление нового способа, нужно будет добавить класс.
+     *
      * @param $fileName
      * @return bool|int
      */
-    public function saveBoardToFile($fileName)
+    public function saveBoard()
     {
-        $storage = new FileStorageInterface($fileName);
+        $fileName = 'board.txt';
+        $storage = new FileStorage($fileName);
         return $storage->save($this);
     }
 
