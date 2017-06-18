@@ -4,7 +4,7 @@
 namespace app\events;
 
 
-use app\Models\Figure;
+use app\Figures\Figure;
 
 class PrintMessageEvent implements EventsInterface
 {

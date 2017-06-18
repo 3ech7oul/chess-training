@@ -1,7 +1,7 @@
 <?php
 namespace app\events;
 
-use app\Models\Figure;
+use app\Figures\Figure;
 
 interface EventsInterface
 {

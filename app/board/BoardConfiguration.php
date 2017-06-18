@@ -1,8 +1,8 @@
 <?php
 namespace app\Board;
 
-use \app\Models\PawnFactory;
-use \app\Models\RookFactory;
+use \app\Figures\PawnFactory;
+use \app\Figures\RookFactory;
 
 class BoardConfiguration
 {

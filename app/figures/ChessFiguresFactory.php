@@ -1,5 +1,5 @@
 <?php
-namespace app\Models;
+namespace app\Figures;
 
 use app\events\EventsInterface;
 

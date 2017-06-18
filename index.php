@@ -6,8 +6,8 @@ function __autoload($class)
 
 use \app\Board\BoardConfiguration;
 use \app\Board\Board;
-use \app\Models\PawnFactory;
-use \app\Models\RookFactory;
+use \app\Figures\PawnFactory;
+use \app\Figures\RookFactory;
 use \app\helpers\FileStorage;
 use \app\events\PrintMessageEvent;
 

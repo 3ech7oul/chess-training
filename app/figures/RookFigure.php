@@ -1,11 +1,11 @@
 <?php
 
 
-namespace app\Models;
+namespace app\Figures;
 
-class PawnFigure extends Figure
+
+class RookFigure extends Figure
 {
-
     /**
      * @param array $figureNewPlace
      * @return FigureState
