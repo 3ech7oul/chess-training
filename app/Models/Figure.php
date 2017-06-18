@@ -24,10 +24,20 @@ abstract class Figure
 
     }
 
+    /**
+     * @param array $figureNewPlace
+     * @return mixed
+     */
     abstract function makeMove(array $figureNewPlace);
 
+    /**
+     * @return mixed
+     */
     abstract function currentFigurePlace();
 
+    /**
+     * @return FigureMemento
+     */
     abstract public function saveToMemento(): FigureMemento;
 
 

@@ -12,6 +12,10 @@ class PawnFactory extends ChessFiguresFactory
 
     public $name = 'Пешка';
 
+    /**
+     * @param array $figurePlace
+     * @return Figure
+     */
     public function createFigure(array $figurePlace): Figure
     {
         $this->makeEvent(self::EVENT_ADD);

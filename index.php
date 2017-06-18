@@ -11,14 +11,6 @@ use \app\Models\RookFactory;
 use \app\helpers\FileStorageInterface;
 use \app\events\PrintMessageEvent;
 
-/***
-
-$pawnFactory = new PawnFactory();
-$pawnFigure = $pawnFactory->createFigure(['a'=>1]);
-var_dump($pawnFigure->figurePlace);
-var_dump($pawnFigure->makeMove(['a'=>2]));
-*/
-
 
 $rockFactory = new RookFactory();
 $rockFactory->addEventsObserver(new PrintMessageEvent(), RookFactory::EVENT_ADD);
